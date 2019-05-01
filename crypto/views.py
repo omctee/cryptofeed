@@ -7,7 +7,7 @@ def home(request):
 
 	# Grab Crypto Price Data
 	#Select currencies
-	coins = "BTC,ETH,XRP,LTC,XMR,BCH,BNB,ZB,ZEC,ETC,DASH,NEO,ADA,XLM,BTT,USDT,BGG,TRX,EOS"
+	coins = "BTC,ETH,XLM,XRP,LTC,XMR,BCH,BNB,ZB,ZEC,ETC,DASH,NEO,ADA,BTT,USDT,BGG,TRX,EOS"
 	price_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + coins + "&tsyms=USD")
 	price = json.loads(price_request.content)
 
